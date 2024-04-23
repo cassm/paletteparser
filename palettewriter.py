@@ -9,8 +9,6 @@ if len(sys.argv) != 3:
 
     filename should be the relative path to an rgb formatted .bmp
     outputLength is an integer, and determines the output length of the palette header
-
-    N.B. as these arrays are stored in PROGMEM, their contents should be accessed using memcpy_P or pgm_read_byte
     """)
 
     exit(1)
