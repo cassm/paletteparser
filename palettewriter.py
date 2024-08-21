@@ -1,6 +1,6 @@
 import os
 import sys
-import imageio
+import imageio.v2 as imageio
 import numpy as np
 
 if len(sys.argv) != 3:
