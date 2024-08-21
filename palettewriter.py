@@ -21,7 +21,11 @@ if not os.path.isfile(bmpFile):
 
 image = imageio.imread(bmpFile)
 indices = list(int(i * (len(image[0]) - 1) / paletteLength) for i in range(paletteLength))
-colours = [list(image[0][index]) for index in indices]
+
+colours = []
+
+for index in indices:
+    colours.append([int(image[0][index][channel]) for channel in range(3)])
 
 filename = bmpFile.split('/')[-1][:-4]
 defguard = f"PALETTE_{filename.upper()}_H"
